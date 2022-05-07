@@ -9,16 +9,19 @@
     <meta name="author" content="Gabriel Steven Machicao Quispe">
     <!--<link href="estilos.css" rel="stylesheet">-->
     <!--<style></style>-->
-    <script src="./js/script.js"></script>  
+    <script src="./js/script.js">
+      let f = document.getElementById("codigo");
+      const link = f.value;
+    </script>  
   </head>
   <body>
     <h1>Ejercicio 4 </h1>
     <p><em>Coloca el link: </em><p>
-    <input type="text" id="word" name="word"><br>
-    <button onclick=convertirPalabra()>Mostrar Código</button> 
+    <input type="text" id="codigo" name="codigo"><br>
+    <button onclick=obtenerCodigo(link)>Mostrar Código</button> 
     <div>
       <h3>Código: </h3>
-      <p id="codigo"></p>
+      <p id="newcodigo"></p>
     </div>
   </body>
 </html>
