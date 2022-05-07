@@ -9,12 +9,32 @@
     <meta name="author" content="Gabriel Steven Machicao Quispe">
     <!--<link href="estilos.css" rel="stylesheet">-->
     <!--<style></style>-->
-    <!--<script src="https://code.jquery.com/jquery-3.5.0.js"></script>-->
-    <!--<script src="script.js"></script>-->
-    <!--<script></script>-->    
+    <script>
+      let fecha = new Date();
+      const dia = fecha.getDate();
+      function nombrarDia(dia){
+	if( dia % 7 == 1){
+	  document.getElementById("demo").innerHTML = "Domingo";
+      } else if (dia % 7 == 2){
+	document.getElementById("demo").innerHTML = "Lunes";
+      } else if (dia % 7 == 3){
+	document.getElementById("demo").innerHTML = "Martes";
+      } else if (dia % 7 == 4){
+	document.getElementById("demo").innerHTML = "Miercoles";
+      } else if (dia % 7 == 5){
+	  document.getElementById("demo").innerHTML = "Jueves";
+      } else if (dia % 7 == 6){
+	  document.getElementById("demo").innerHTML = "Viernes";
+      } else {
+	document.getElementById("demo").innerHTML = "Sábado";
+      }
+    }
+    </script>    
   </head>
   <body>
-    
+    <h1>Ejercicio 1 </h1>
+    <button onclick="nombrarDia(dia)">Dime el día</button>
+    <p id="demo"></p>
 
   </body>
 </html>
