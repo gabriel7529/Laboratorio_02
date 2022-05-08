@@ -1,7 +1,7 @@
 let suma = 0;
+
 function genera_tabla(){
   let body = document.getElementsByTagName("body")[0];
-
   let tabla = document.createElement("table");
   let tbBody = document.createElement("tbody");
   let columnas = document.getElementById("columnas");
@@ -22,5 +22,13 @@ function genera_tabla(){
   }
   tabla.appendChild(tbBody);
   body.appendChild(tabla);
-  document.getElementById("resultado").innerHTML = suma;
+  document.getElementById("boton").innerHTML = "Calcular";
 }
+function mostrarSuma(){
+  let body = document.getElementsByTagName("body")[0]
+  let resultado = document.createElement("p");
+  let texto = document.createTextNode("La suma es: " + suma);
+  resultado.appendChild(texto);
+  body.appendChild(resultado);
+}
+
