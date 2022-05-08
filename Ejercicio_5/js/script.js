@@ -1,3 +1,4 @@
+const suma = 0;
 function genera_tabla(){
   let body = document.getElementsByTagName("body")[0];
 
@@ -11,8 +12,8 @@ function genera_tabla(){
     let hilera = document.createElement("tr");
     for(let j=0; j<numC; j++){
       let celda = document.createElement("td");
-      let texto = document.createTextNode("Prueba");
-      celda.appendChild(texto);
+      let num = document.createTextNode(Math.ceil(Math.random()*(100 - 1)+1));
+      celda.appendChild(num);
       
       hilera.appendChild(celda);
     }
