@@ -1,4 +1,4 @@
-const suma = 0;
+let suma = 0;
 function genera_tabla(){
   let body = document.getElementsByTagName("body")[0];
 
@@ -12,13 +12,15 @@ function genera_tabla(){
     let hilera = document.createElement("tr");
     for(let j=0; j<numC; j++){
       let celda = document.createElement("td");
-      let num = document.createTextNode(Math.ceil(Math.random()*(100 - 1)+1));
+      let aux = Math.ceil(Math.random()*(100 - 1)+1);
+      let num = document.createTextNode(aux);
+      suma += aux;
       celda.appendChild(num);
-      
       hilera.appendChild(celda);
     }
     tbBody.appendChild(hilera);
   }
   tabla.appendChild(tbBody);
   body.appendChild(tabla);
+  document.getElementById("resultado").innerHTML = suma;
 }
